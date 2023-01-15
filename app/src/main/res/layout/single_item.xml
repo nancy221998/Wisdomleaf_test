@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewpamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativedsd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E5EAEB">
+
+                    <TextView
+                        android:id="@+id/dateTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/redrectanglecorner"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Id : "
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                 </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardviewpamount"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Name : "
+                android:textColor="#000000"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameTv"
+                android:layout_marginLeft="4dp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Desc : "
+                android:textColor="#000000"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/titleTv"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

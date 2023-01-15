@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <include
+        layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/searchViewLay"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal"
+        android:background="@drawable/redrectanglecorner"
+        android:layout_margin="@dimen/_5sdp">
+
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="0dp"
+            android:layout_weight="3.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#fff"
+            android:gravity="left|center"
+            android:hint="Search by author name... "
+            android:textColorHint="@color/progress_shader_color"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/checkImage"
+            android:layout_gravity="right|center"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:src="@drawable/ic_search_gray"
+            android:layout_height="@dimen/_20sdp"/>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_below="@+id/searchViewLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleList"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/single_item"
+        android:visibility="gone"
+        />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hintText"
+        android:text="Search Image with Name"
+        android:textSize="@dimen/_14sdp"
+        android:gravity="center"
+        android:textColor="@color/progress_shader_color"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat_bold"/>
+
+</RelativeLayout>

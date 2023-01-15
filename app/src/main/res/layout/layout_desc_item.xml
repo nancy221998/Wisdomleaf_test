@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:minWidth="250dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Description"
+        android:id="@+id/headerTv"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/cancelIv"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/_10sdp"
+        android:src="@drawable/cancel"/>
+
+    <TextView
+        android:id="@+id/editnotes"
+        android:layout_below="@+id/headerTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Write something here..."
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/black"
+       />
+
+
+</RelativeLayout>
